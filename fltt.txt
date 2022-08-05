@@ -1,0 +1,23 @@
+l = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+
+lnew= []
+for sublist in l:
+    if type(sublist) != list:
+        lnew.append(sublist)
+    else:
+        for data in sublist:
+            if type(data) != list:
+                 lnew.append(data)
+            else:
+                for r in data:
+                    if type(r) != list:
+                        lnew.append(r)
+                    else:
+                        for c in r:
+                            if type(c) != list:
+                                lnew.append(c)
+                                        
+                                
+               
+            
+print(lnew)
